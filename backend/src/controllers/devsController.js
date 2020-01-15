@@ -14,7 +14,9 @@ const store = async (req, res) => {
   let dev = await Dev.findOne({ github_username });
 
   if(!dev) {
-    const { name = login, avatar_url, bio } = await getGithubInfo(github_username);
+    const apiRes = await getGithubInfo(github_username);
+
+    const { name = login, avatar_url, bio } = apiRes;
 
     const techsArray = parseStringAsArray(techs);
 
@@ -28,7 +30,7 @@ const store = async (req, res) => {
       name,
       avatar_url,
       bio,
-      techsArray,
+      techs: techsArray,
       location
     })
   }
