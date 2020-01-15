@@ -7,4 +7,3 @@ module.exports = async function getGithubInfo(github_username) {
     resolve(githubRes.data);
   })
 }
-
