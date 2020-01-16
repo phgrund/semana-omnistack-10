@@ -13,17 +13,21 @@ Meu progresso durante os dias do curso:
 - Servidor em express criado
 - Cluster no MongoDB Atlas criado
 - Back-end
- - Controllers
-   - Devs
-   - Search
- - Models
-   - Dev
-   - PointSchema
- - Routes
-   - /devs (listar, criar, editar**\*** e deletar**\***)
-   - /search (buscar)
+  - Controllers
+    - Devs
+    - Search
+  - Models
+    - Dev
+    - PointSchema
+  - Routes
+    - /devs (listar, criar, editar**\*** e deletar**\***)
+    - /search (buscar)
 
 ## Dia 3
+- Aplicação em React criada para a parte da web
+- Conexão com o back-end efetuada por meio de requests à API
+  - DevForm para a criação de novos usuários no banco de dados
+  - DevItem para a exibição dos usuários cadastrados
 
 ## Dia 4
 
