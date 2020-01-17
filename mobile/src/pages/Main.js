@@ -116,7 +116,7 @@ const styles = StyleSheet.create({
     marginTop: 5
   },
   searchForm: {
-    position: "absolute",
+    position: 'absolute',
     top: 20,
     left: 20,
     right: 20,
