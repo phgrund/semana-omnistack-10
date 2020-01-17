@@ -1,6 +1,7 @@
 const Dev = require('../models/Dev');
 const parseStringAsArray = require('../utils/parseStringAsArray');
 const getGithubInfo = require('../utils/getGithubInfo');
+const { findConnections, sendMessage } = require('../websocket');
 
 const index = async (req, res) => {
   const devs = await Dev.find();
@@ -30,7 +31,14 @@ const store = async (req, res) => {
       bio,
       techsArray,
       location
-    })
+    });
+
+    const sendSocketMessageTo = findConnections(
+      { latitude, longitude },
+      techsArray
+    )
+
+    sendMessage(sendSocketMessageTo, 'new-dev', dev);
   }
 
   return res.json(dev);
