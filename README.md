@@ -30,6 +30,9 @@ Meu progresso durante os dias do curso:
   - DevItem para a exibição dos usuários cadastrados
 
 ## Dia 4
+- Aplicação em React Native criada para mobile
+  - Visualização no mapa dos usuários cadastrados dentro de 10km
+  - Filtro por tecnologias
 
 ## Dia 5
-
+- Integração do mobile com o backend por meio de sockets
