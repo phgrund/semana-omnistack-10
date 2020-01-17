@@ -53,7 +53,7 @@ const update = async (req, res) => {
   dev.avatar_url = avatar_url;
   dev.bio = bio;
 
-  dev.save();
+  await dev.save();
 
   return res.json({ message: 'Usuário atualizado' })
 }
@@ -67,7 +67,7 @@ const destroy = async (req, res) => {
     return res.status(404).json({ error: 'Usuário não encontrado' });
   }
 
-  dev.remove();
+  await dev.remove();
 
   return res.json({ message: 'Usuário deletado' });
 
